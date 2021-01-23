@@ -1,0 +1,96 @@
+.product {
+
+
+  &__wrapper {
+    padding: 30px 0;
+  }
+
+  &__header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 34px;
+    color: $color;
+  }
+
+  &__slider {
+    overflow: hidden;   
+    position: relative;
+
+    width: calc(100% + 28px);
+    margin: 20px -14px 0;
+    padding: 0 14px;
+  }
+
+  &__slides {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    display: flex;
+  }
+  
+  &__pagination {
+    width: 100%;
+    margin: 0 -14px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__arrow {
+    width: 28px;
+    max-width: 28px;
+    height: 28px;
+    border: 1px solid #C4C4C4;
+    border-radius: 50%;
+    position: relative;
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 6px;
+      left: 50%;
+      top: calc(50% - -2px);
+      transform: translate(-50%) rotate(45deg);
+      background: #1D2D4A;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 6px;
+      left: 50%;
+      top: calc(50% - 2px);
+      transform: translate(-50%) rotate(-45deg);
+      background: #1D2D4A;
+    }
+
+    &--next {
+      transform: rotate(180deg);
+    }
+
+    &--disable {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    transition: 0.3s;
+    &:hover {
+      transition: 0.3s;
+      border: 1px solid $color;
+
+      &::before {
+        background: $color;
+      }
+      &::after {
+        background: $color;
+      }
+    }
+  }
+}

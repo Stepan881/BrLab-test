@@ -1,0 +1,36 @@
+.sub-nav {
+  margin-top: 28px;
+
+  &__list {
+    display: flex;
+ 
+  }
+
+  &__item {
+    position: relative;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+
+      &::after {
+        position: absolute;
+        content: '/';
+        color: #20A980;
+        right: -15px;
+      }
+    }
+  }
+
+  &__link {
+
+    transition: 0.3s;
+
+    &:hover {
+      transition: 0.3s;
+      color: $color-underline;
+    }
+  }
+}

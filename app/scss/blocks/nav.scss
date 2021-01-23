@@ -1,0 +1,36 @@
+.nav {
+
+  &__list {
+    display: flex;
+    margin-left: 24px;
+  }
+
+  &__link {
+    color: $menu-c-link;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 0px 17px;
+    border-bottom: 2px solid transparent;
+
+    transition: 0.3s;
+    &:hover {
+      transition: 0.3s;
+      border-bottom: 2px solid $color-underline;
+      color: $color;
+      svg {
+        path {
+          transition: 0.3s;
+          fill: $color;
+        }
+        
+      }
+    }
+
+    svg {
+      path {
+        transition: 0.3s;
+      }
+    }
+  }
+}

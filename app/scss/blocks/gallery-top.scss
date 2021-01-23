@@ -1,0 +1,39 @@
+.gallery-top {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -20px;
+  }
+
+  &__block-text {
+    max-width: calc(50% - 10px);
+    margin-bottom: 20px;
+
+    p:not(:last-child) {
+      margin-bottom: 35px;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    color: $color;
+  }
+
+  &__block-img {
+    max-width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    border-radius: 10px;
+  }
+}

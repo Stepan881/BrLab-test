@@ -1,0 +1,112 @@
+.contacts {
+
+  &__wrapper {
+    padding: 46px 0;
+  }
+
+  &__header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 34px;
+    color: $color;
+    margin-bottom: -35px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color;
+  }
+
+  &__content {
+    margin: 60px 0;
+    background: $bg-c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    min-height: 232px;
+    padding: 35px 40px 30px 73px;
+
+    &--bottom {
+      padding: 27px 40px 30px 78px;
+    }
+  }
+
+  &__city {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    color: $color-underline;
+  }
+
+  &__address {
+    margin-top: 20px;
+    font-style: normal;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(./../../img/pin.svg) center no-repeat;
+      width: 14px;
+      height: 20px;
+      left: -34px;
+      top: 3px;
+    }
+  }
+
+  &__tel {
+    margin-top: 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(./../../img/tel.svg) center no-repeat;
+      width: 18px;
+      height: 18px;
+      left: -34px;
+      top: 3px;
+    }
+    
+    @include hover();
+  }
+
+  &__mail {
+    margin-top: 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(./../../img/mail.svg) center no-repeat;
+      width: 20px;
+      height: 16px;
+      left: -34px;
+      top: 3px;
+    }
+    
+    @include hover();
+  }
+
+  &__wrapper-img {
+    max-width: 452px;
+    border-radius: 8px;
+
+  }
+
+  &__map {
+    margin: 32px 0 26px;
+    height: 369px;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
