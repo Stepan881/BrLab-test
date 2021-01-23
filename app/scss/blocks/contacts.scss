@@ -103,7 +103,11 @@
   &__map {
     margin: 32px 0 26px;
     height: 369px;
-
     background: url(./../img/map.jpg) center no-repeat;
+    
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
   }
 }

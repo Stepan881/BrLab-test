@@ -32,7 +32,7 @@ const team = () => {
   });
   link.addEventListener(`click`, evt => {
     evt.preventDefault();
-    evt.target.remove();
+    link.remove();
     cards.forEach((el, i) => {
       el.style.display = `flex`;
     });
@@ -41,22 +41,22 @@ const team = () => {
 team();
 
 
-function initMap() {
+// function initMap() {
 
-  const icon = {
-    scaledSize: new google.maps.Size(38, 55), 
-    url: './../img/pin.svg'
-  }
+//   const icon = {
+//     scaledSize: new google.maps.Size(38, 55), 
+//     url: './../img/pin.svg'
+//   }
 
-  let map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 55.65001347053159, lng: 37.539977099920804 },
-    zoom: 17,
-  });
+//   let map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: 55.65001347053159, lng: 37.539977099920804 },
+//     zoom: 17,
+//   });
 
-  let marker = new google.maps.Marker({
-    position: {lat: 55.65001347053159, lng: 37.539977099920804},
-    map: map,
-    icon: icon,
+//   let marker = new google.maps.Marker({
+//     position: {lat: 55.65001347053159, lng: 37.539977099920804},
+//     map: map,
+//     icon: icon,
     
-  });
-}
+//   });
+// }
