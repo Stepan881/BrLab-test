@@ -1,7 +1,7 @@
 {
-  "name": "top-3d-group",
+  "name": "br-lab",
   "version": "1.0.0",
-  "description": "top-3d-group тестовое задание",
+  "description": "BrLab тестовое задание",
   "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.2"

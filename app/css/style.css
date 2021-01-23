@@ -860,7 +860,7 @@ p {
   .contacts__address::before {
     position: absolute;
     content: '';
-    background: url(./../../img/pin.svg) center no-repeat;
+    background: url(./../img/pin.svg) center no-repeat;
     width: 14px;
     height: 20px;
     left: -34px;
@@ -874,7 +874,7 @@ p {
   .contacts__tel::before {
     position: absolute;
     content: '';
-    background: url(./../../img/tel.svg) center no-repeat;
+    background: url(./../img/tel.svg) center no-repeat;
     width: 18px;
     height: 18px;
     left: -34px;
@@ -892,7 +892,7 @@ p {
   .contacts__mail::before {
     position: absolute;
     content: '';
-    background: url(./../../img/mail.svg) center no-repeat;
+    background: url(./../img/mail.svg) center no-repeat;
     width: 20px;
     height: 16px;
     left: -34px;
