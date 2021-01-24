@@ -1,6 +1,10 @@
 .sub-nav {
   margin-top: 28px;
 
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
   &__list {
     display: flex;
  

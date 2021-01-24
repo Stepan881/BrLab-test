@@ -1,7 +1,13 @@
 .card-product {
 
+  @media (max-width: $tablet) {
+    margin: 1.5%;
+    width: 30%;
+  }
+
   &__wrapper {
     min-width: 215px;
+    width: 100%;
     min-height: 175px;
     background: $bg-c;
     border-radius: 8px;

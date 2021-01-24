@@ -1,8 +1,26 @@
 .join {
+
+  &__vacancies-link {
+    display: flex;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #20A94A;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+
   .product {
 
     &__wrapper {
       padding: 14px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @media (max-width: $tablet) {
+        padding: 14px 15px 0;
+      }
     }
     
     &__header {

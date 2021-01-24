@@ -3,6 +3,23 @@
   &__list {
     display: flex;
     margin-left: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;  
+      margin: 0;
+      padding: 10px;
+      margin-left: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-left: 24px;
+    @media (max-width: $tablet) {
+      margin-left: 15px;
+    }
   }
 
   &__link {
@@ -30,6 +47,14 @@
     svg {
       path {
         transition: 0.3s;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      border-bottom: none;
+      padding: 0;
+      &:hover {
+        border-bottom: none;
       }
     }
   }

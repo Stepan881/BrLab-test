@@ -1,25 +1,47 @@
-const productSlider = new Swiper('.product-swiper', {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  wrapperClass: 'product__slides',
-  slideClass: 'card-product',
-  navigation: {
-    nextEl: '.product__arrow--next',
-    prevEl: '.product__arrow--prew',
-    disabledClass: 'product__arrow--disable',
-  },
-});
+let windowWidth = window.innerWidth;
+let productSlider = undefined;
+let joinSlider = undefined;
 
-const joinSlider = new Swiper('.join-swiper', {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  wrapperClass: 'product__slides',
-  slideClass: 'card-product',
-  navigation: {
-    nextEl: '.product__arrow--next',
-    prevEl: '.product__arrow--prew',
-    disabledClass: 'product__arrow--disable',
-  },
+function initSwiper() {
+  windowWidth = window.innerWidth;
+  if (windowWidth >= 991) {
+    if(productSlider !== undefined) return;
+    productSlider = new Swiper('.product-swiper', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      wrapperClass: 'product__slides',
+      slideClass: 'card-product',
+      navigation: {
+        nextEl: '.product__arrow--next',
+        prevEl: '.product__arrow--prew',
+        disabledClass: 'product__arrow--disable',
+      },
+    });
+    
+    joinSlider = new Swiper('.join-swiper', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      wrapperClass: 'product__slides',
+      slideClass: 'card-product',
+      navigation: {
+        nextEl: '.product__arrow--next',
+        prevEl: '.product__arrow--prew',
+        disabledClass: 'product__arrow--disable',
+      },
+    });
+  } else {
+    if(productSlider === undefined) return;
+    productSlider.destroy(false, true);
+    productSlider = undefined;
+    joinSlider.destroy(false, true);
+    productSlider = undefined;
+  }
+
+}
+initSwiper();
+
+window.addEventListener(`resize`, () => {
+  initSwiper();
 });
 
 const team = () => {

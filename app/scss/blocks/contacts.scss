@@ -2,6 +2,10 @@
 
   &__wrapper {
     padding: 46px 0;
+
+    @media (max-width: $tablet) {
+      padding: 46px 15px;
+    }
   }
 
   &__header {
@@ -34,6 +38,11 @@
 
     &--bottom {
       padding: 27px 40px 30px 78px;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 400px;
+      margin: 60px 15px;
     }
   }
 
@@ -97,7 +106,13 @@
   &__wrapper-img {
     max-width: 452px;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
 
+  &__img {
+    border-radius: 8px;
+    height: auto;
   }
 
   &__map {
