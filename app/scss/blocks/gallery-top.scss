@@ -1,23 +1,25 @@
 .gallery-top {
 
   &__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
     margin-bottom: -20px;
 
     @media (max-width: $tablet) {
       flex-direction: column;
+      grid-template-columns: 1fr;
     }
 
     div:nth-child(2) {
-      order: -1;
+      @media (max-width: $tablet) {
+        order: -1;
+      }
     }
   }
 
   &__block-text {
-    max-width: calc(50% - 10px);
     margin-bottom: 20px;
 
     p:not(:last-child) {
@@ -27,6 +29,8 @@
     img {
       margin-bottom: 20px;
       height: auto;
+      width: 100%;
+      max-width: 450px;
 
       @media (max-width: $tablet) {
         margin: 0 auto 20px;
@@ -47,7 +51,6 @@
   }
 
   &__block-img {
-    max-width: calc(50% - 10px);
     margin-bottom: 20px;
 
 
@@ -60,6 +63,8 @@
 
   &__img {
     border-radius: 10px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 450px;
   }
 }

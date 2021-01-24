@@ -8,6 +8,10 @@
     color: #20A94A;
     align-items: flex-end;
     margin-left: auto;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   .product {
