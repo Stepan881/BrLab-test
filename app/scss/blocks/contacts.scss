@@ -6,6 +6,9 @@
     @media (max-width: $tablet) {
       padding: 46px 15px;
     }
+    @media (max-width: $mobile) {
+      padding: 40px 15px 80px;
+    }
   }
 
   &__header {
@@ -16,7 +19,7 @@
     margin-bottom: -35px;
 
     @media (max-width: $mobile) {
-      margin-bottom: 0;
+      margin-bottom: 40px;
     }
   }
 
@@ -30,6 +33,7 @@
 
     @media (max-width: $mobile) {
       flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -46,6 +50,10 @@
 
     &--bottom {
       padding: 27px 40px 30px 78px;
+
+      @media (max-width: $mobile) {
+        order: -1;
+      }
     }
 
     @media (max-width: $tablet) {
@@ -53,11 +61,11 @@
       margin: 60px 15px;
     }
     
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       max-width: 100%;
       margin: 0;
-      padding-left: 107px;
-      padding-right: 60px;
+      padding: 30px 0 34px;
+      margin-bottom: -10px;
     }
   }
 
@@ -66,6 +74,10 @@
     font-size: 30px;
     line-height: 34px;
     color: $color-underline;
+
+    @media (max-width: $mobile) {      
+      text-align: center;
+    }
   }
 
   &__address {
@@ -81,6 +93,10 @@
       height: 20px;
       left: -34px;
       top: 3px;
+    }
+
+    @media (max-width: $mobile) {      
+      margin: 20px 60px 0 108px;
     }
   }
 
@@ -99,6 +115,10 @@
     }
     
     @include hover();
+
+    @media (max-width: $mobile) {      
+      margin: 20px 60px 0 108px;
+    }
   }
 
   &__mail {
@@ -116,6 +136,10 @@
     }
     
     @include hover();
+
+    @media (max-width: $mobile) {      
+      margin: 20px 60px 0 108px;
+    }
   }
 
   &__wrapper-img {
@@ -123,6 +147,10 @@
     border-radius: 8px;
     display: flex;
     align-items: center;
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
   }
 
   &__img {
@@ -135,6 +163,11 @@
     height: 369px;
     background: url(./../img/map.jpg) center no-repeat;
     
+    @media (max-width: $mobile) {
+      margin: 32px -15px 36px;
+      width: calc(100% + 30px);
+    }
+
     iframe {
       height: 100%;
       width: 100%;

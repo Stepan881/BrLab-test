@@ -5,7 +5,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    color: #20A94A;
+    color: $info-c-link;
     align-items: flex-end;
     margin-left: auto;
 
@@ -15,7 +15,6 @@
   }
 
   .product {
-
     &__wrapper {
       padding: 14px 0;
       display: flex;
@@ -25,17 +24,38 @@
       @media (max-width: $tablet) {
         padding: 14px 15px 0;
       }
+      
+      @media (max-width: $mobile) {
+        padding: 43px 15px 0;
+      }
     }
     
     &__header {
       font-weight: bold;
       font-size: 30px;
       line-height: 34px;
+
+      @media (max-width: $mobile) {
+        width: 84%;
+      }
+    }
+
+    &__slides {
+      @media (max-width: $tablet) {
+        display: flex;
+        grid-template-columns: none;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+      }
     }
   }
   
-  .card-product__wrapper {
-    padding: 49px 0 18px;
-    min-height: 215px;
+  .card-product {
+    min-width: 215px;
+    display: flex;
+    &__wrapper {
+      padding: 49px 0 18px;
+      min-height: 215px;
+    }
   }
 }

@@ -7,7 +7,6 @@
 
   &__list {
     display: flex;
- 
   }
 
   &__item {
@@ -29,9 +28,7 @@
   }
 
   &__link {
-
     transition: 0.3s;
-
     &:hover {
       transition: 0.3s;
       color: $color-underline;

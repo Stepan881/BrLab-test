@@ -6,6 +6,10 @@
     @media (max-width: $tablet) {
       padding: 30px 15px;
     }
+
+    @media (max-width: $mobile) {
+      padding: 40px 15px;
+    }
   }
 
   &__header {
@@ -18,7 +22,6 @@
   &__slider {
     overflow: hidden;   
     position: relative;
-
     width: calc(100% + 28px);
     margin: 20px -14px 0;
     padding: 0 14px;
@@ -43,9 +46,9 @@
       grid-column-gap: 15px;
       grid-row-gap: 15px;
     }
+
     @media (max-width: $mobile) {
       grid-template-columns: repeat(2,1fr);
-
     }
   }
   
@@ -60,6 +63,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
 
     @media (max-width: $tablet) {
       display: none;
@@ -67,6 +71,7 @@
   }
 
   &__arrow {
+    pointer-events: auto;
     width: 28px;
     max-width: 28px;
     height: 28px;

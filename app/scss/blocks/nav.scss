@@ -1,5 +1,66 @@
 .nav {
 
+  &__overlay {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: flex;
+      position: absolute;
+      left: 100%;
+      width: calc(100vw - 320px);
+      height: 100vh;
+      background-color: $menu-c-link;
+      opacity: 0.3;
+    }
+  }
+
+  &__close {
+    display: none;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: 11px;
+    top: 8px;
+
+    @media (max-width: $mobile) {
+      display: flex;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 2px;
+        background: $menu-c-link;
+        left: 6px;
+        top: 50%;
+        transform: rotate(45deg) translate(0);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 2px;
+        background: $menu-c-link;
+        left: 6px;
+        top: 50%;
+        transform: rotate(-45deg) translate(0);
+      }
+
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+        &::before {
+          background: $color;
+        }
+        &::after {
+          background: $color;
+        }
+      }
+    }
+
+  }
+
   &__list {
     display: flex;
     margin-left: 24px;
@@ -11,12 +72,14 @@
       margin: 0;
       padding: 10px;
       margin-left: 15px;
+      width: 320px;
     }
   }
 
   &__item {
     display: flex;
     margin-left: 24px;
+
     @media (max-width: $tablet) {
       margin-left: 15px;
     }
@@ -52,7 +115,7 @@
 
     @media (max-width: $mobile) {
       border-bottom: none;
-      padding: 0;
+      padding: 5px 0;
       &:hover {
         border-bottom: none;
       }

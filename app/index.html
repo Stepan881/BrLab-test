@@ -10,14 +10,21 @@
 </head>
 
 <body>
-
   <header class="header">
     <h1 class="visually-hidden">Мы - Metaratings</h1>
     <div class="header__wrapper container">
       <a class="header__logo logo" href="#!">
         <img class="logo__img" src="./img/logo.svg" alt="Логтип">
       </a>
+      <button class="header__btn-menu">
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0 0V1.66667H14V0H0ZM0 10H9.33333V8.33333H0V10ZM14 5.83333H0V4.16667H14V5.83333Z" fill="#7C7C7C" />
+        </svg>
+      </button>
       <nav class="header__nav nav">
+        <div class="nav__overlay"></div>
+        <button class="nav__close"></button>
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#!" class="nav__link">Рейтинг букмекеров</a>
@@ -45,9 +52,14 @@
           </li>
         </ul>
       </nav>
+      <a class="header__user" href="#!">
+        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.99994 0C10.3435 0 12.2352 1.809 12.2352 4.05C12.2352 6.291 10.3435 8.1 7.99994 8.1C5.65641 8.1 3.76465 6.291 3.76465 4.05C3.76465 1.809 5.65641 0 7.99994 0Z" fill="black"/>
+          <path d="M8 18C4.66667 18 1.72 16.1714 0 13.4C0.04 10.5571 5.33333 9 8 9C10.6533 9 15.96 10.5571 16 13.4C14.28 16.1714 11.3333 18 8 18Z" fill="black"/>
+        </svg>          
+      </a>
     </div>
   </header>
-
 
   <main class="main">
     <section class="sub-nav">
@@ -81,7 +93,7 @@
             <div class="gallery-top__block-text">
               <p class="gallery-top__text">Metaratings – это международное спортивное СМИ, имеющее региональные версии
                 сайта в США, Казахстане, Украине, Белоруссии, Узбекистане, Таджикистане и России. </p>
-              <p class="gallery-top__text">Наши новости цитируют ведущие спортивные и общественно-политические СМИ
+              <p class="gallery-top__text">Наши новости цитируют ведущие спортивные и общественно&#8209;политические СМИ
                 России, Украины, Казахстана, Белоруссии и других стран.</p>
             </div>
             <div class="gallery-top__block-img">
@@ -93,12 +105,11 @@
                 частными лицами, поэтому на нашем сайте вы найдете объективную информацию, которая не прошла через
                 жернова многочисленных согласований. Мы называем вещи своими именами.</p>
             </div>
-            <div class="gallery-top__block-img">
+            <div class="gallery-top__block-img gallery-top__block-img--mobile">
               <img class="gallery-top__img" src="./img/gallery-top-3.jpg" alt="Фотография">
             </div>
           </div>
         </div>
-
         <div class="first-screen__info">
           <svg width="63" height="40" viewBox="0 0 63 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -111,12 +122,10 @@
               d="M34.8196 13.5737L32.9835 13.2458C32.7868 13.1802 32.6556 13.1147 32.5245 12.9179L31.6065 11.2786C31.3442 10.8196 30.754 10.8196 30.4917 11.2786L29.5737 12.9179C29.5081 13.0491 29.3114 13.1802 29.1147 13.2458L27.2786 13.5737C26.8196 13.6392 26.6228 14.2294 26.9507 14.6229L28.1966 15.9999C28.3278 16.131 28.3933 16.3278 28.3278 16.5245L28.131 18.3606C28.0655 18.8196 28.5901 19.213 28.9835 19.0163L30.6884 18.2294C30.8851 18.1638 31.0163 18.1638 31.213 18.2294L32.9179 19.0163C33.3769 19.213 33.836 18.8851 33.7704 18.3606V16.4589C33.7704 16.2622 33.836 16.0655 33.9015 15.9343L35.1474 14.5573C35.5409 14.2294 35.3442 13.6392 34.8196 13.5737Z"
               fill="#999999" />
           </svg>
-
           <p class="first-screen__info-text">Свидетельство о регистрации СМИ серия ЭЛ № ФС77-74641 от 24 декабря 2018
             года выдано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций.
           </p>
         </div>
-
       </div>
     </section>
     <section class="product">
@@ -124,35 +133,34 @@
         <h2 class="product__header">Наши продукты</h2>
         <div class="product__slider product-swiper">
           <div class="product__slides">
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <img class="card-product__icon" src="./img/icons/mfo.svg" alt="МФО">
-                <p class="card-product__text">Рейтинг <span class="br"></span> МФО</p>
+                <a class="card-product__text" href="#!">Рейтинг <span class="br"></span> МФО</a>
               </div>
             </div>
             <div class="card-product">
               <div class="card-product__wrapper">
                 <img class="card-product__icon" src="./img/icons/casino.svg" alt="Онлайн Казино">
-                <p class="card-product__text">Рейтинг <span class="br"></span> Онлайн Казино</p>
+                <a class="card-product__text" href="#!">Рейтинг <span class="br"></span> Онлайн Казино</a>
               </div>
             </div>
             <div class="card-product">
               <div class="card-product__wrapper">
                 <img class="card-product__icon" src="./img/icons/cinema.svg" alt="Онлайн кинотеатры">
-                <p class="card-product__text">Рейтинг <span class="br"></span> Онлайн кинотеатров</p>
+                <a class="card-product__text" href="#!">Рейтинг <span class="br"></span> Онлайн кинотеатров</a>
               </div>
             </div>
             <div class="card-product">
               <div class="card-product__wrapper">
                 <img class="card-product__icon" src="./img/icons/lotto.svg" alt="Лото">
-                <p class="card-product__text">Рейтинг <span class="br"></span> Лото</p>
+                <a class="card-product__text" href="#!">Рейтинг <span class="br"></span> Лото</a>
               </div>
             </div>
             <div class="card-product">
               <div class="card-product__wrapper">
                 <img class="card-product__icon" src="./img/icons/bookmaker.svg" alt="рейтинг букмекеров">
-                <p class="card-product__text">USА версия <span class="br"></span> рейтинг букмекеров</p>
+                <a class="card-product__text" href="#!">USА версия <span class="br"></span> рейтинг букмекеров</a>
               </div>
             </div>
           </div>
@@ -249,7 +257,6 @@
         <a class="join__vacancies-link" href="#!">Все вакансии</a>
         <div class="product__slider join-swiper">
           <div class="product__slides">
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">Lead product designer</a>
@@ -257,7 +264,6 @@
                 <span class="card-product__city">Москва</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">Senior PHP developer (Laravel)</a>
@@ -265,7 +271,6 @@
                 <span class="card-product__city">Краснодар</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">PHP - разработчик (Symfony)</a>
@@ -273,7 +278,6 @@
                 <span class="card-product__city">Краснодар</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">1С Bitrix developer (Senior)</a>
@@ -281,7 +285,6 @@
                 <span class="card-product__city">Краснодар</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">Lead product designer</a>
@@ -289,7 +292,6 @@
                 <span class="card-product__city">Москва</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">Senior PHP developer (Laravel)</a>
@@ -297,7 +299,6 @@
                 <span class="card-product__city">Краснодар</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">PHP - разработчик (Symfony)</a>
@@ -305,7 +306,6 @@
                 <span class="card-product__city">Краснодар</span>
               </div>
             </div>
-
             <div class="card-product">
               <div class="card-product__wrapper">
                 <a class="card-product__header" href="#!">1С Bitrix developer (Senior)</a>
@@ -313,7 +313,6 @@
                 <span class="card-product__city">Краснодар</span>
               </div>
             </div>
-
           </div>
           <div class="product__pagination">
             <button class="product__arrow product__arrow--prew"></button>
@@ -322,13 +321,9 @@
         </div>
       </div>
     </section>
-
     <section class="contacts">
       <div class="contacts__wrapper container">
         <h2 class="contacts__header">Наши офисы</h2>
-
-
-
         <div class="contacts__block">
           <div class="contacts__content">
             <h3 class="contacts__city">Москва</h3>
@@ -340,12 +335,10 @@
             <img class="contacts__img" src="./img/home1.jpg" alt="Фотография">
           </div>
         </div>
-
         <div class="contacts__map" id="map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.7790699438233!2d38.96231041554366!3d45.049704979098195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04f7ab6537341%3A0x2e072a42644a08d2!2z0YPQuy4g0JrRgNCw0YHQvdGL0YUg0J_QsNGA0YLQuNC30LDQvSwgMjAwLCDQmtGA0LDRgdC90L7QtNCw0YAsINCa0YDQsNGB0L3QvtC00LDRgNGB0LrQuNC5INC60YDQsNC5LCAzNTAwNDk!5e0!3m2!1sru!2sru!4v1611406640656!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-
-        <div class="contacts__block">
+        <div class="contacts__block contacts__block--mobile">
           <div class="contacts__wrapper-img">
             <img class="contacts__img" src="./img/home2.jpg" alt="Фотография">
           </div>
@@ -355,7 +348,6 @@
             <a class="contacts__tel" href="tel:+79999994334">+7 999 999 43 34</a>
             <a class="contacts__mail" href="mailto:">info@metaratings.ru</a>
           </div>
-
         </div>
       </div>
     </section>
@@ -363,9 +355,8 @@
 
   <footer class="footer">
   </footer>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJvz4aMf1oM5cCc3hA3Vx4HvtxQag3iho&callback=initMap" type="text/javascript"></script> -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJvz4aMf1oM5cCc3hA3Vx4HvtxQag3iho&callback=initMap" type="text/javascript"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
-
 </html>
